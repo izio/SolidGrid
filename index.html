@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Solid Grid v1.0</title>
+
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" />
+	
+    <link rel="stylesheet" type="text/css" href="fixedgrid.min.css" />
+    <link rel="stylesheet" type="text/css" href="base.min.css" />
+	
+	<style>
+		.row.small 
+		{
+			padding: 11px 0;
+		}
+
+		.row.medium 
+		{
+			padding: 22px 0;
+		}
+
+		.row.large 
+		{
+			padding: 44px 0;
+		}
+	
+		.highlight-parent
+		{    
+			background-color: rgba(0,0,0,.025);
+			border-radius: 5px;
+		}
+		
+		.highlight-column
+		{    
+			background-color: rgba(0,0,0,.05);
+			padding: 5px;
+			border-radius: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="twelve columns">
+				<h1 class="page-strapline">Standard Grid</h1>
+				<div class="row small">
+					<div class="one column ">
+						<div class="highlight-column">One</div>
+					</div>
+					<div class="eleven columns">
+						<div class="highlight-column">Eleven</div>
+					</div>
+				</div>
+				<div class="row small">
+					<div class="two columns ">
+						<div class="highlight-column">Two</div>
+					</div>
+					<div class="ten columns">
+						<div class="highlight-column">Ten</div>
+					</div>
+				</div>
+				<div class="row small">
+					<div class="three columns ">
+						<div class="highlight-column">Three</div>
+					</div>
+					<div class="nine columns">
+						<div class="highlight-column">Nine</div>
+					</div>
+				</div>
+				<div class="row small">
+					<div class="four columns ">
+						<div class="highlight-column">Four</div>
+					</div>
+					<div class="eight columns">
+						<div class="highlight-column">Eight</div>
+					</div>
+				</div>
+				<div class="row small">
+					<div class="five columns ">
+						<div class="highlight-column">Five</div>
+					</div>
+					<div class="seven columns">
+						<div class="highlight-column">Seven</div>
+					</div>
+				</div>
+				<div class="row small">
+					<div class="six columns ">
+						<div class="highlight-column">Six</div>
+					</div>
+					<div class="six columns">
+						<div class="highlight-column">Six</div>
+					</div>
+				</div>
+				<div class="row small">
+					<div class="seven columns ">
+						<div class="highlight-column">Seven</div>
+					</div>
+					<div class="five columns">
+						<div class="highlight-column">Five</div>
+					</div>
+				</div>
+				<div class="row small">
+					<div class="eight columns ">
+						<div class="highlight-column">Eight</div>
+					</div>
+					<div class="four columns">
+						<div class="highlight-column">Four</div>
+					</div>
+				</div>
+				<div class="row small">
+					<div class="nine columns ">
+						<div class="highlight-column">Nine</div>
+					</div>
+					<div class="three columns">
+						<div class="highlight-column">Three</div>
+					</div>
+				</div>
+				<div class="row small">
+					<div class="ten columns ">
+						<div class="highlight-column">Ten</div>
+					</div>
+					<div class="two columns">
+						<div class="highlight-column">Two</div>
+					</div>
+				</div>
+				<div class="row small">
+					<div class="eleven columns ">
+						<div class="highlight-column">Eleven</div>
+					</div>
+					<div class="one column">
+						<div class="highlight-column">One</div>
+					</div>
+				</div>
+				<pre>&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="eleven columns"&gt;
+            Eleven
+        &lt;/div&gt;
+        &lt;div class="one column"&gt;
+            One
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+				</pre>
+				<h1 class="page-strapline">Nested Grid</h1>
+				<div class="row small">
+					<div class="twelve columns">
+						<div class="highlight-column">Twelve</div>
+					</div>
+				</div>
+				<div class="row small">
+					<div class="six columns">
+						<div class="highlight-parent">
+							<div class="row small">
+								<div class="three columns">
+									<div class="highlight-column">Three</div>
+								</div>
+								<div class="three columns">
+									<div class="highlight-column">Three</div>
+								</div>
+							</div>
+							<div class="row small">
+								<div class="three columns">
+									<div class="highlight-column">Three</div>
+								</div>
+								<div class="three columns">
+									<div class="highlight-column">Three</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="six columns">
+						<div class="highlight-column">Six</div>
+					</div>
+				</div>
+				<div class="row small">
+					<div class="six columns">
+						<div class="highlight-column">Six</div>
+					</div>
+					<div class="six columns">
+						<div class="highlight-column">Six</div>
+					</div>
+				</div>
+				<pre>&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="six columns"&gt;
+            &lt;div class="row"&gt;
+                &lt;div class="three columns"&gt;
+                    Three
+                &lt;/div&gt;
+                &lt;div class="three columns"&gt;
+                    Three
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="six columns"&gt;
+            One
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+				</pre>
+				<p><em>* when nesting columns in a fixed grid each column can only contain a grid of as many columns as the parent column. When using the fluid grid a nested grid can contain up to twelve columns</em></p>
+				<h1 class="page-strapline">Offset Grid</h1>
+				<div class="row small">
+					<div class="six columns">
+						<div class="highlight-column">Six</div>
+					</div>
+					<div class="six columns">
+						<div class="highlight-column">Six</div>
+					</div>
+				</div>
+				<div class="row small">
+					<div class="five columns offset-by-one">
+						<div class="highlight-column">Five</div>
+					</div>
+					<div class="five columns offset-by-one">
+						<div class="highlight-column">Five</div>
+					</div>
+				</div>
+				<div class="row small">
+					<div class="four columns offset-by-two">
+						<div class="highlight-column">Four</div>
+					</div>
+					<div class="four columns offset-by-two">
+						<div class="highlight-column">Four</div>
+					</div>
+				</div>
+				<div class="row small">
+					<div class="three columns offset-by-three">
+						<div class="highlight-column">Three</div>
+					</div>
+					<div class="three columns offset-by-three">
+						<div class="highlight-column">Three</div>
+					</div>
+				</div>
+				<div class="row small">
+					<div class="two columns offset-by-four">
+						<div class="highlight-column">Two</div>
+					</div>
+					<div class="two columns offset-by-four">
+						<div class="highlight-column">Two</div>
+					</div>
+				</div>
+				<div class="row small">
+					<div class="one column offset-by-five">
+						<div class="highlight-column">One</div>
+					</div>
+					<div class="one column offset-by-five">
+						<div class="highlight-column">One</div>
+					</div>
+				</div>
+				<pre>&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="five columns offset-by-one"&gt;
+            Eleven
+        &lt;/div&gt;
+        &lt;div class="six columns"&gt;
+            One
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+				</pre>
+				<h1 class="page-strapline">Typography</h1>
+				<p>Typography is based around a font size of 13px and line-height of 22px with the padding and margins of all standard set at multiples of 11px to ensure that your content has a natural rhythm.</p>
+				<div class="row">
+					<div class="six columns">
+						<h1>Heading &lt;H1&gt;</h1>
+						<h2>Heading &lt;H2&gt;</h2>
+						<h3>Heading &lt;H3&gt;</h3>
+						<h4>Heading &lt;H4&gt;</h4>
+						<h5>Heading &lt;H5&gt;</h5>
+						<h6>Heading &lt;H6&gt;</h6>
+					</div>
+					<div class="six columns">
+						<blockquote>This is a blockquote <cite>Patrick Robin</cite></blockquote>
+						<pre>this is a preformatted text block</pre>
+						<ul>
+							<li>unordered list item</li>
+							<li>unordered list item</li>
+							<li>unordered list item</li>
+						</ul>
+						<ol>
+							<li>ordered list item</li>
+							<li>ordered list item</li>
+							<li>ordered list item</li>
+						</ol>
+					</div>
+				</div>
+				<p>There are a number of additional classes that can also be applied to your content to add unique formatting, a full list of these classes is below:</p>
+				<ul>
+					<li><code>.page-title</code></li>
+					<li><code>.page-strapline</code></li>
+					<li><code>.page-introduction</code></li>
+					<li><code>.text-left</code></li>
+					<li><code>.text-centre</code></li>
+					<li><code>.text-right</code></li>
+					<li><code>.quiet</code></li>
+					<li><code>.loud</code></li>
+					<li><code>.highlight</code></li>
+					<li><code>.removed</code></li>
+				</ul>
+				<h1 class="page-strapline">Tables</h1>
+				<p>By default there are no formatting styles associated with the table tag this is to ensure that no styling is improperly associated with tables created by third party plugins such as calendars. However, by adding the class <code>.table</code> to a table its captions, headers and columns will all be styled as well as having zebra striping on alternate rows.</p>
+				<table class="table">
+					<caption>table caption</caption>
+					<thead>
+						<tr>
+							<th class="text-left">start</th>
+							<th class="text-left">end</th>
+							<th class="text-left">title</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>30/07/2013</td>
+							<td>31/07/2013</td>
+							<td>boing</td>
+						</tr>
+						<tr>
+							<td>01/01/2013</td>
+							<td>10/02/2013</td>
+							<td>wibble</td>
+						</tr>
+						<tr>
+							<td>06/05/2013</td>
+							<td>08/06/2013</td>
+							<td>bang</td>
+						</tr>
+						<tr>
+							<td>05/06/2013</td>
+							<td>09/06/2013</td>
+							<td>wibble</td>
+						</tr>
+					</tbody>
+				</table>
+				<h1 class="page-strapline">Forms</h1>
+				<p>By default form inputs are designed to utilise the full width of their parent element with labels being positioned above their related input. To display an inline form with the label either to the left or right of the input apply add the class <code>.left</code> or <code>.right</code> to the label and set a width on the relevant input.</p>
+				<form id="email-form">
+					<fieldset>
+						<legend>Email</legend>
+						<ol>
+							<li>
+								<label for="email-form-title">Title</label> 
+								<select id="email-form-title" name="select">
+									<option value="1">Mr</option>
+									<option value="2">Miss</option>
+									<option value="2">Mrs</option>
+								</select>
+							</li>
+							<li><label for="email-form-name">Name</label><input id="email-form-name" name="name" type="text" maxlength="255" /></li>
+							<li><label for="email-form-email">Email</label><input id="email-form-email" name="email" type="text" maxlength="255" /></li>
+							<li><label for="email-form-subject">Subject</label><input id="email-form-subject" name="subject" type="text" maxlength="255" /></li>
+							<li><label for="email-form-message">Message</label><textarea id="email-form-message" name="message" row="5" cols="50"></textarea></li>
+							<li class="text-right">
+								<button name="cancel" type="button">Cancel</button>
+								<input name="submit" type="submit" value="Submit" class="primary" />
+								<input name="disabled" type="submit" value="Disabled" disabled="disabled" class="primary" />
+							</li>
+						</ol>
+					</fieldset>
+				</form>
+				<h2 class="page-strapline">Content Boxes</h2>
+				<p>There are four multipurpose <em>boxes</em> that can be added to your code to highlight content, simply create a div element with the class <code>.box</code> and optionally one of the following classes <code>.information</code>, <code>.confirmation</code>, <code>.warning</code>. Content boxes can also be further enhanced by adding the class <code>.rounded</code> which will add rounded corners to the element, and you can also add a title to the content box by adding an element with the class <code>.title</code> which will add a colour coordinated title bar.</p>
+				<div class="row">
+					<div class="six columns">
+						<div class="box">
+							<h1 class="title">standard box</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec enim gravida arcu ultricies ultricies id nec ligula. Nunc pulvinar felis quis nulla porta varius.</p>
+						</div>
+					</div>
+					<div class="six columns">
+						<div class="box rounded">
+							<h1 class="title">standard box</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec enim gravida arcu ultricies ultricies id nec ligula. Nunc pulvinar felis quis nulla porta varius.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="six columns">
+						<div class="box information">
+							<h1 class="title">information box</h1>
+							<p>Phasellus placerat hendrerit nulla, in rhoncus massa tincidunt eget. Suspendisse luctus urna nisl, ultrices tempus libero varius eu.</p>
+						</div>
+					</div>
+					<div class="six columns">
+						<div class="box information rounded">
+							<h1 class="title">information box</h1>
+							<p>Phasellus placerat hendrerit nulla, in rhoncus massa tincidunt eget. Suspendisse luctus urna nisl, ultrices tempus libero varius eu.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="six columns">
+						<div class="box confirmation">
+							<h1 class="title">confirmation box</h1>
+							<p>Nulla facilisi. Donec est enim, pellentesque id vulputate sed, ullamcorper quis justo. Duis nec condimentum sapien.</p>
+						</div>
+					</div>
+					<div class="six columns">
+						<div class="box confirmation">
+							<h1 class="title">confirmation box</h1>
+							<p>Nulla facilisi. Donec est enim, pellentesque id vulputate sed, ullamcorper quis justo. Duis nec condimentum sapien.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="six columns">
+						<div class="box warning">
+							<h1 class="title">warning box</h1>
+							<p>Sed sit amet sem eu elit vulputate ultrices. Cras purus ipsum, lobortis in blandit eget, pretium id tortor. Etiam interdum ac tellus quis pharetra.</p>
+						</div>
+					</div>
+					<div class="six columns">
+						<div class="box warning rounded">
+							<h1 class="title">warning box</h1>
+							<p>Sed sit amet sem eu elit vulputate ultrices. Cras purus ipsum, lobortis in blandit eget, pretium id tortor. Etiam interdum ac tellus quis pharetra.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="six columns">
+						<pre>
+&lt;div class="box"&gt;
+	&lt;h1 class="title"&gt;box&lt;/h1&gt;
+	&lt;p&gt;
+		...
+	&lt;/p&gt;
+&lt;/div&gt;
+						</pre>
+					</div>
+					<div class="six columns">
+						<pre>
+&lt;div class="box rounded"&gt;
+	&lt;h1 class="title"&gt;box&lt;/h1&gt;
+	&lt;p&gt;
+		...
+	&lt;/p&gt;
+&lt;/div&gt;
+						</pre>
+					</div>
+				</div>
+				<h2 class="page-strapline">Utilities</h2>
+				<h3>Paging</h3>
+				<p>Any ordered or unordered list can be converted in to a pager by simply adding the class <code>.paging</code> to the parent list, the current page is highlighted by adding the class <code>.current</code> to the list element which also prevents it from being clicked.</p>
+				<ol class="paging">
+					<li><a href="#">1</a></li>
+					<li class="current"><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+				</ol>
+				<pre>
+&lt;ol class="paging"&gt;
+	&lt;li&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+	&lt;li class="current"&gt;&lt;a href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;4&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;5&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+        </pre>
+				<h3>Images</h3>
+				<p>There are three classes that you can add to an image to change the way that they are displayed and can be combined in any combination.</p>
+				<div class="row">
+					<div class="four columns alpha">
+						<h4>Scaled</h4>
+						<p>Adding the class <code>.scale</code> ensures that the image will scale with its parent container.</p>
+						<img src="Sample.jpg" alt="wallpaper" class="scale" />
+						<pre>
+&lt;img src="..." class="scale"/&gt;
+                </pre>
+					</div>
+					<div class="four columns">
+						<h4>Bordered</h4>
+						<p>Adding the class <code>.bordered</code> adds a thin border and box shadow.</p>
+						<img src="Sample.jpg" alt="wallpaper" class="scale bordered" />
+						<pre>
+&lt;img src="..." class="scale bordered"/&gt;
+                </pre>
+					</div>
+					<div class="four columns omega">
+						<h4>Rounded</h4>
+						<p>Adding the class <code>.rounded</code> adds rounded corners to the image.</p>
+						<img src="Sample.jpg" alt="wallpaper" class="scale rounded" />
+						<pre>
+&lt;img src="..." class="scale rounded"/&gt;
+                </pre>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
