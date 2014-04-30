@@ -435,7 +435,7 @@ input[type="checkbox"], input[type="radio"]
     margin-top: 6px;
 }
 
-button, input[type="submit"], input[type="reset"], input[type="button"], a.button, .button
+button, input[type="submit"], input[type="reset"], input[type="button"], a.button, a.button:visited, .button
 {
     height: 33px;
     line-height: 33px;
