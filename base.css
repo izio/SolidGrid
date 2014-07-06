@@ -437,7 +437,7 @@ input[type="checkbox"], input[type="radio"]
 
 button, input[type="submit"], input[type="reset"], input[type="button"], a.button, a.button:visited, .button
 {
-    height: 33px;
+    min-height: 33px;
     line-height: 33px;
     background-color: #474949;
     text-align: center;
@@ -725,12 +725,17 @@ img.pull-right
     display: none;
 }
 
+.hidden-on-screen
+{
+    display: none;
+}
+
 .paging
 {
     display: block;
     padding: 0;
     margin: 0 0 22px 0;
-	height: 44px;
+	min-height: 44px;
     text-align: left;
 	word-spacing: -5px;
 }
@@ -789,7 +794,7 @@ img.pull-right
 	
 @media only print
 {
-	.no-print
+	.hidden-on-paper
 	{
 	    display: none;    
 	}
