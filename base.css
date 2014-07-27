@@ -435,6 +435,12 @@ input[type="checkbox"], input[type="radio"]
     margin-top: 6px;
 }
 
+input[type="file"], input[type="file"]:focus
+{
+	border: 0;
+	padding: 0;    
+}
+
 button, input[type="submit"], input[type="reset"], input[type="button"], a.button, a.button:visited, .button
 {
     min-height: 33px;
@@ -725,11 +731,6 @@ img.pull-right
     display: none;
 }
 
-.hidden-on-screen
-{
-    display: none;
-}
-
 .paging
 {
     display: block;
@@ -790,7 +791,18 @@ img.pull-right
         }
 
 
-/* print styles */
+/* screen only styles */
+
+@media only screen
+{
+	.hidden-on-screen
+	{
+	    display: none;    
+	}
+}
+
+
+/* print only styles */
 	
 @media only print
 {
