@@ -73,6 +73,7 @@ html
 	
 body
 {
+    padding: 11px;
 	color: #414141;
 	font: 13px/22px Segoe UI,Verdana,Geneva,sans-serif;
 	-webkit-font-smoothing: antialiased;
@@ -387,6 +388,12 @@ label
     label.right
     {
         margin-left: 22px;
+    }
+
+    label span
+    {
+        display: block;
+        font-weight: normal; 
     }
 
 input[type="text"], input[type="password"], input[type="email"], textarea, select
