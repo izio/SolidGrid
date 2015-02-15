@@ -23,7 +23,7 @@ Add the base stylesheet
 ```html
 <link rel="stylesheet" href="base.min.css">
 ```
-Optionally add the combined stylesheet
+Alteratively add the combined stylesheet that includes both the grid and the base styles
 ```html
 <link rel="stylesheet" href="combined.min.css">
 ```
