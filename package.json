@@ -1,0 +1,21 @@
+{
+    "name": "SolidGrid",
+    "version": "1.0.0",
+    "description": "SolidGrid\r =========\r # A responsive grid system for the rapid development of mobile friendly websites.",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/izio/SolidGrid.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/izio/SolidGrid/issues"
+    },
+    "homepage": "https://github.com/izio/SolidGrid",
+    "devDependencies": {
+        "grunt": "^0.4.5",
+        "grunt-contrib-less": "~1.0.0",
+        "grunt-combine-media-queries": "~1.0.19",
+        "grunt-contrib-cssmin": "~0.12.1"
+    }
+}

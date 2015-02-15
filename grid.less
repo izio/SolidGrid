@@ -1,0 +1,325 @@
+﻿/*
+Solid Grid V2.0
+Copyright 2013, Patrick Robin
+www.solidgrid.co.uk
+Free to use under the MIT license.
+http://www.opensource.org/licenses/mit-license.php
+01/10/2013
+*/
+
+@import "mixins.less";
+
+
+// rows
+.row {
+    margin: 0 auto;
+}
+
+.row:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+    .row .row {
+        width: auto;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+// columns
+.column, .columns {
+    box-sizing: border-box;
+    padding: 0 (@gutterWidth / 2);
+    min-height: 1px;
+}
+
+// utilities
+.clear {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+
+// extra small devices
+@media only screen and (min-width : @extraSmallQuery) {
+
+    // rows
+    .row {
+        width: @extraSmallWidth;
+    }
+}
+
+@media only screen and (min-width : @extraSmallQuery) and (max-width : (@smallQuery - 1)) {
+
+    // utilities
+    .hidden-extra-small {
+        display: none;
+    }
+}
+
+
+// small devices
+@media only screen and (min-width : @smallQuery) {
+
+    // rows
+    .row {
+        width: @smallWidth;
+    }
+}
+
+@media only screen and (min-width : @smallQuery) and (max-width : (@mediumQuery - 1)) {
+
+    // utilities
+    .hidden-small {
+        display: none;
+    }
+}
+
+
+// medium devices
+@media only screen and (min-width : @mediumQuery) {
+
+    @columnWidth: (100% / 12);
+
+    // rows
+    .row {
+        width: @mediumWidth;
+    }
+
+    // base columns
+    .column, .columns {
+        float: left;
+    }
+
+    .one.column {
+        width: @columnWidth;
+    }
+
+    .two.columns {
+        width: (@columnWidth * 2);
+    }
+
+    .three.columns {
+        width: (@columnWidth * 3);
+    }
+
+    .four.columns {
+        width: (@columnWidth * 4);
+    }
+
+    .five.columns {
+        width: (@columnWidth * 5);
+    }
+
+    .six.columns {
+        width: (@columnWidth * 6);
+    }
+
+    .seven.columns {
+        width: (@columnWidth * 7);
+    }
+
+    .eight.columns {
+        width: (@columnWidth * 8);
+    }
+
+    .nine.columns {
+        width: (@columnWidth * 9);
+    }
+
+    .ten.columns {
+        width: (@columnWidth * 10);
+    }
+
+    .eleven.columns {
+        width: (@columnWidth * 11);
+    }
+
+    .twelve.columns {
+        width: (@columnWidth * 12);
+    }
+
+
+    // offset columns
+    .offset-by-one {
+        margin-left: @columnWidth;
+    }
+
+    .offset-by-two {
+        margin-left: (@columnWidth * 2);
+    }
+
+    .offset-by-three {
+        margin-left: (@columnWidth * 3);
+    }
+
+    .offset-by-four {
+        margin-left: (@columnWidth * 4);
+    }
+
+    .offset-by-five {
+        margin-left: (@columnWidth * 5);
+    }
+
+    .offset-by-six {
+        margin-left: (@columnWidth * 6);
+    }
+
+    .offset-by-seven {
+        margin-left: (@columnWidth * 7);
+    }
+
+    .offset-by-eight {
+        margin-left: (@columnWidth * 8);
+    }
+
+    .offset-by-nine {
+        margin-left: (@columnWidth * 9);
+    }
+
+    .offset-by-ten {
+        margin-left: (@columnWidth * 10);
+    }
+
+    .offset-by-eleven {
+        margin-left: (@columnWidth * 11);
+    }
+
+
+    // push columns
+    .push-by-one {
+        left: @columnWidth;
+    }
+
+    .push-by-two {
+        left: (@columnWidth * 2);
+    }
+
+    .push-by-three {
+        left: (@columnWidth * 3);
+    }
+
+    .push-by-four {
+        left: (@columnWidth * 4);
+    }
+
+    .push-by-five {
+        left: (@columnWidth * 5);
+    }
+
+    .push-by-six {
+        left: (@columnWidth * 6);
+    }
+
+    .push-by-seven {
+        left: (@columnWidth * 7);
+    }
+
+    .push-by-eight {
+        left: (@columnWidth * 8);
+    }
+
+    .push-by-nine {
+        left: (@columnWidth * 9);
+    }
+
+    .push-by-ten {
+        left: (@columnWidth * 10);
+    }
+
+    .push-by-eleven {
+        left: (@columnWidth * 11);
+    }
+
+
+    // pull columns
+    .pull-by-one {
+        right: @columnWidth;
+    }
+
+    .pull-by-two {
+        right: (@columnWidth * 2);
+    }
+
+    .pull-by-three {
+        right: (@columnWidth * 3);
+    }
+
+    .pull-by-four {
+        right: (@columnWidth * 4);
+    }
+
+    .pull-by-five {
+        right: (@columnWidth * 5);
+    }
+
+    .pull-by-six {
+        right: (@columnWidth * 6);
+    }
+
+    .pull-by-seven {
+        right: (@columnWidth * 7);
+    }
+
+    .pull-by-eight {
+        right: (@columnWidth * 8);
+    }
+
+    .pull-by-nine {
+        right: (@columnWidth * 9);
+    }
+
+    .pull-by-ten {
+        right: (@columnWidth * 10);
+    }
+
+    .pull-by-eleven {
+        right: (@columnWidth * 11);
+    }
+}
+
+@media only screen and (min-width : @mediumQuery) and (max-width : (@largeQuery - 1)) {
+
+    // utilities
+    .hidden-medium {
+        display: none;
+    }
+}
+
+// large devices
+@media only screen and (min-width : @largeQuery) {
+
+    // rows
+    .row {
+        width: @largeWidth;
+    }
+}
+
+@media only screen and (min-width : @largeQuery) and (max-width : (@extraLargeQuery - 1)) {
+
+    // utilities
+    .hidden-large {
+        display: none;
+    }
+}
+
+// extra large devices
+@media (min-width: @extraLargeQuery) {
+
+    // rows
+    .row {
+        width: @extraLargeWidth;
+    }
+
+    // utilities
+    .hidden-extra-large {
+        display: none;
+    }
+}

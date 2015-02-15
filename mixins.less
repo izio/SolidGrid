@@ -1,0 +1,76 @@
+﻿@extraSmallQuery: 320px;
+@extraSmallWidth: 320px;
+@smallQuery: 550px;
+@smallWidth: 550px;
+@mediumQuery: 720px;
+@mediumWidth: 720px;
+@largeQuery: 960px;
+@largeWidth: 960px;
+@extraLargeQuery: 1200px;
+@extraLargeWidth: 1200px;
+@columnWidth: (100% / 12);
+@gutterWidth: 20px;
+
+
+.makeRow(){
+    margin: 0 auto;
+    & &{
+        width: auto;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    .clearFix;
+    @media only screen and (min-width : @extraSmallQuery) {
+        width: @extraSmallWidth
+    }
+    @media only screen and (min-width : @smallQuery) {
+        width: @smallWidth
+    }
+    @media only screen and (min-width : @mediumQuery) {
+        width: @mediumWidth
+    }
+    @media only screen and (min-width : @largeQuery) {
+        width: @largeWidth
+    }
+    @media only screen and (min-width : @extraLargeQuery) {
+        width: @extraLargeWidth
+    } 
+}
+
+.makeColumn(@columns){
+    box-sizing: border-box;
+    padding: 0 (@gutterWidth / 2);
+    min-height: 1px;
+    @media only screen and (min-width : @mediumQuery) {
+        float: left;
+        width: @columnWidth * @columns;
+    }
+}
+
+.offsetBy(@columns){
+    @media only screen and (min-width : @mediumQuery) {
+        margin-left: @columnWidth * @columns;
+    }
+}
+
+.pushBy(@columns){
+    @media only screen and (min-width : @mediumQuery) {
+        left: @columnWidth * @columns;
+    }
+}
+
+.pullBy(@columns){
+    @media only screen and (min-width : @mediumQuery) {
+        right: @columnWidth * @columns;
+    }
+}
+
+.clearFix(){
+    &:after{
+        content: "\0020";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+}
