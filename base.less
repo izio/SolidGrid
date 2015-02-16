@@ -161,6 +161,15 @@ h1 {
     line-height: @lineHeight * 2;
 }
 
+    h1.title {
+        border-bottom: 1px solid @titleBorder;
+        margin: (@lineHeight - 1) 0;
+        padding-bottom: @lineHeight - 1;
+        line-height: @lineHeight * 2;
+        font-size: @fontSize * 2.5;
+        color: @titleColour;
+    }
+
 h2 {
     font-size: @fontSize * 2;
     line-height: @lineHeight * 2;
@@ -188,9 +197,23 @@ h6 {
     margin-bottom: @lineHeight / 2;
 }
 
+    h1.strapline, h2.strapline, h3.strapline, h4.strapline, h5.strapline, h6.strapline{
+        border-top: 1px solid @straplineBorder;
+        border-bottom: 1px solid @straplineBorder;
+        margin: ((@lineHeight * 2) - 1) 0;
+        color: @straplineColour;
+    }
+
 p {
     margin-bottom: @lineHeight;
 }
+
+    p.introduction {
+        padding: (@lineHeight / 2) 0;
+        margin-bottom: @lineHeight;
+        font-size: (@fontSize * 1.5);
+        line-height: @lineHeight * 1.5;
+    }
 
 em {
     font-style: italic;
@@ -311,42 +334,6 @@ hr {
     clear: both;
 }
 
-.title {
-    border-bottom: 1px solid @titleBorder;
-    margin: (@lineHeight - 1) 0;
-    padding-bottom: @lineHeight - 1;
-    line-height: @lineHeight * 2;
-    font-size: @fontSize * 2.5;
-    color: @titleColour;
-}
-
-.strapline {
-    border-top: 1px solid @straplineBorder;
-    border-bottom: 1px solid @straplineBorder;
-    margin: ((@lineHeight * 2) - 1) 0;
-    line-height: @lineHeight * 2;
-    color: @straplineColour;
-}
-
-.introduction {
-    padding: (@lineHeight / 2) 0;
-    margin-bottom: @lineHeight;
-    font-size: (@fontSize * 1.5);
-    line-height: @lineHeight * 1.5;
-}
-
-.text-left {
-    text-align: left;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.text-right {
-    text-align: right;
-}
-
 span.quiet {
     color: @quietColour;
 }
@@ -363,6 +350,18 @@ span.highlight {
 
 span.removed {
     text-decoration: line-through;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
 }
 
 
