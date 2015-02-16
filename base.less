@@ -7,77 +7,7 @@ http://www.opensource.org/licenses/mit-license.php
 01/10/2013
 */
 
-
-// typography
-@lineHeight: 26px;
-@fontSize: 14px;
-@headerFont: "Lucida Sans Unicode","Lucida Grande",sans-serif;
-@headerColour: #5d5d5d;
-@bodyBackground: #fff;
-@bodyFont: Verdana,Geneva,sans-serif;
-@bodyColour: #5d5d5d;
-@linkColour: #056273;
-@activeColour: #006699;
-@hrColour: #e4e4e4;
-@quoteColour: #056273;
-@codeBackground: #f9f2f4;
-@codeColour: #056273;
-@codeRadius: 5px;
-@preBackground: #f9f2f4;
-@preColour: #056273;
-@preBorder: #e4e4e4;
-@preRadius: 6px;
-@imageBorderColour: #fff;
-@imageBorderShadow: 0 5px 4px rgba(0,0,0,.2);
-@imageBorderSize: 10px;
-@imageRadius: 6px;
-@titleColour: #5d5d5d;
-@titleBorder: #e4e4e4;
-@straplineBorder: #e4e4e4;
-@straplineColour: #5d5d5d;
-@quietColour: #ccc;
-@loudColour: #000;
-@highlightBackground: #0A96A9;
-@highlightColour: #fff;
-
-
-// tables
-@tableCaptionBackground: transparent;
-@tableCaptionColour: #5d5d5d;
-@tableHeaderBackground: #transparent;
-@tableHeaderColour: #666;
-@tableCellBackground: transparent;
-@tableCellColour: #5d5d5d;
-@tableCellAlternateBackground: #f4f4f4;
-@tableCellAlternateColour: #5d5d5d;
-
-
-// forms
-@inputBorder: #cacaca;
-@inputColour: #777;
-@inputBackground: #fff;
-@inputActiveBackground: #fff;
-@inputActiveBorder: #006699;
-@inputActiveColour: #555;
-@inputShadow: 0 0 3px rgba(0,0,0,.2);
-@labelErrorColour: #ad7676;
-@inputErrorBorder: #e0b1b1;
-@inputErrorBackground: #ffd9d5;
-@inputErrorColour: #ad7676;
-@inputErrorShadow: inset 0 0 45px #f0bfba;
-@inputErrorFocusShadow: 0 0 3px rgba(224, 177, 177, 0.2);
-@inputRadius: 5px;
-
-
-// buttons
-@buttonBackground: #474949;
-@buttonColour: #fff;
-@buttonHover: #3a3c3c;
-@buttonPrimary: #428BCA;
-@buttonPrimaryHover: #357ebd;
-@buttonActive: #5CB85C;
-@buttonRadius: 5px;
-
+@import "base.mixins.less";
 
 
 // reset
@@ -147,7 +77,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     margin-bottom: @lineHeight;
     font-family: @headerFont;
-    font-weight: bold;
+    font-weight: @headerWeight;
     color: @headerColour;
 }
 
@@ -167,6 +97,7 @@ h1 {
         padding-bottom: @lineHeight - 1;
         line-height: @lineHeight * 2;
         font-size: @fontSize * 2.5;
+        font-weight: @titleWeight;
         color: @titleColour;
     }
 
@@ -261,8 +192,7 @@ code {
     white-space: nowrap;
     background-color: @codeBackground;
     vertical-align: top;
-    padding: 0 (@lineHeight / 2);
-    display: inline-block;
+    padding: 2px;
     -moz-border-radius: @codeRadius;
     -webkit-border-radius: @codeRadius;
     border-radius: @codeRadius;
@@ -541,20 +471,6 @@ input[disabled], textarea[disabled], select[disabled], button[disabled], .button
     opacity: 0.65;
 }
 
-input[type="submit"], input[type="reset"], input[type="button"], button, a.button, .button {
-    margin-right: (@lineHeight / 2);
-}
-
-.text-center input[type="submit"], .text-center input[type="reset"], .text-center input[type="button"], .text-center button, .text-center a.button, .text-center .button {
-    margin-left: (@lineHeight / 4);
-    margin-right: (@lineHeight / 4);
-}
-
-.text-right input[type="submit"], .text-right input[type="reset"], .text-right input[type="button"], .text-right button, .text-right a.button, .text-right .button {
-    margin-left: (@lineHeight / 2);
-    margin-right: 0;
-}
-
 select {
 }
 
@@ -585,6 +501,7 @@ input.error, select.error, textarea.error, .input-validation-error {
 button, input[type="submit"], input[type="reset"], input[type="button"], a.button, .button {
     height: @lineHeight * 1.5;
     line-height: @lineHeight * 1.5;
+    margin-right: (@lineHeight / 2);
     background-color: @buttonBackground;
     text-align: center;
     text-decoration: none;
@@ -600,11 +517,20 @@ button, input[type="submit"], input[type="reset"], input[type="button"], a.butto
     border-radius: @buttonRadius;
 }
 
+.text-center input[type="submit"], .text-center input[type="reset"], .text-center input[type="button"], .text-center button, .text-center a.button, .text-center .button {
+    margin-left: (@lineHeight / 4);
+    margin-right: (@lineHeight / 4);
+}
+
+.text-right input[type="submit"], .text-right input[type="reset"], .text-right input[type="button"], .text-right button, .text-right a.button, .text-right .button {
+    margin-left: (@lineHeight / 2);
+    margin-right: 0;
+}
+
 a.button, .button {
     height: @lineHeight * 1.5;
     line-height: @lineHeight * 1.5;
     padding: 0 (@lineHeight / 2);
-    margin: 0 0 (@lineHeight / 2) 0;
 }
 
 button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover, a.button:hover, .button:hover {

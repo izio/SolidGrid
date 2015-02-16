@@ -143,7 +143,7 @@ table {
 body {
   background-color: #ffffff;
   color: #5d5d5d;
-  font: 14px/26px Verdana, Geneva, sans-serif;
+  font: 14px/26px 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -157,8 +157,8 @@ h4,
 h5,
 h6 {
   margin-bottom: 26px;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
   color: #5d5d5d;
 }
 h1 a,
@@ -186,6 +186,7 @@ h1.title {
   padding-bottom: 25px;
   line-height: 52px;
   font-size: 35px;
+  font-weight: bold;
   color: #5d5d5d;
 }
 h2 {
@@ -271,8 +272,7 @@ code {
   white-space: nowrap;
   background-color: #f9f2f4;
   vertical-align: top;
-  padding: 0 13px;
-  display: inline-block;
+  padding: 2px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
@@ -528,32 +528,6 @@ button[disabled],
   cursor: default;
   opacity: 0.65;
 }
-input[type="submit"],
-input[type="reset"],
-input[type="button"],
-button,
-a.button,
-.button {
-  margin-right: 13px;
-}
-.text-center input[type="submit"],
-.text-center input[type="reset"],
-.text-center input[type="button"],
-.text-center button,
-.text-center a.button,
-.text-center .button {
-  margin-left: 6.5px;
-  margin-right: 6.5px;
-}
-.text-right input[type="submit"],
-.text-right input[type="reset"],
-.text-right input[type="button"],
-.text-right button,
-.text-right a.button,
-.text-right .button {
-  margin-left: 13px;
-  margin-right: 0;
-}
 textarea {
   line-height: 26px;
   height: auto;
@@ -587,6 +561,7 @@ a.button,
 .button {
   height: 39px;
   line-height: 39px;
+  margin-right: 13px;
   background-color: #474949;
   text-align: center;
   text-decoration: none;
@@ -601,12 +576,29 @@ a.button,
   -webkit-border-radius: 5px;
   border-radius: 5px;
 }
+.text-center input[type="submit"],
+.text-center input[type="reset"],
+.text-center input[type="button"],
+.text-center button,
+.text-center a.button,
+.text-center .button {
+  margin-left: 6.5px;
+  margin-right: 6.5px;
+}
+.text-right input[type="submit"],
+.text-right input[type="reset"],
+.text-right input[type="button"],
+.text-right button,
+.text-right a.button,
+.text-right .button {
+  margin-left: 13px;
+  margin-right: 0;
+}
 a.button,
 .button {
   height: 39px;
   line-height: 39px;
   padding: 0 13px;
-  margin: 0 0 13px 0;
 }
 button:hover,
 input[type="submit"]:hover,
