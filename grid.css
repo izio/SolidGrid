@@ -26,6 +26,7 @@ http://www.opensource.org/licenses/mit-license.php
   box-sizing: border-box;
   padding: 0 10px;
   min-height: 1px;
+  position: relative;
 }
 .clear {
   clear: both;
