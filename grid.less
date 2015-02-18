@@ -48,16 +48,12 @@ http://www.opensource.org/licenses/mit-license.php
 }
 
 
-// extra small devices
-@media only screen and (min-width : @extraSmallQuery) {
-
-    // rows
-    .row {
-        width: @extraSmallWidth;
-    }
+@media @extraSmallScreen {
+    /**/
 }
 
-@media only screen and (min-width : @extraSmallQuery) and (max-width : (@smallQuery - 1)) {
+
+@media @extraSmallScreenOnly {
 
     // utilities
     .hidden-extra-small {
@@ -66,16 +62,12 @@ http://www.opensource.org/licenses/mit-license.php
 }
 
 
-// small devices
-@media only screen and (min-width : @smallQuery) {
+@media @smallScreen {
 
-    // rows
-    .row {
-        width: @smallWidth;
-    }
 }
 
-@media only screen and (min-width : @smallQuery) and (max-width : (@mediumQuery - 1)) {
+
+@media smallScreenOnly {
 
     // utilities
     .hidden-small {
@@ -84,8 +76,7 @@ http://www.opensource.org/licenses/mit-license.php
 }
 
 
-// medium devices
-@media only screen and (min-width : @mediumQuery) {
+@media @mediumScreen {
 
     @columnWidth: (100% / 12);
 
@@ -286,7 +277,8 @@ http://www.opensource.org/licenses/mit-license.php
     }
 }
 
-@media only screen and (min-width : @mediumQuery) and (max-width : (@largeQuery - 1)) {
+
+@media @mediumScreenOnly {
 
     // utilities
     .hidden-medium {
@@ -294,8 +286,8 @@ http://www.opensource.org/licenses/mit-license.php
     }
 }
 
-// large devices
-@media only screen and (min-width : @largeQuery) {
+
+@media @largeScreen {
 
     // rows
     .row {
@@ -303,7 +295,8 @@ http://www.opensource.org/licenses/mit-license.php
     }
 }
 
-@media only screen and (min-width : @largeQuery) and (max-width : (@extraLargeQuery - 1)) {
+
+@media @largeScreenOnly {
 
     // utilities
     .hidden-large {
@@ -311,8 +304,8 @@ http://www.opensource.org/licenses/mit-license.php
     }
 }
 
-// extra large devices
-@media (min-width: @extraLargeQuery) {
+
+@media @extraLargeScreen {
 
     // rows
     .row {

@@ -36,27 +36,20 @@ http://www.opensource.org/licenses/mit-license.php
   width: 0;
   height: 0;
 }
-@media only screen and (min-width: 320px) {
-  .row {
-    width: 320px;
-  }
+@media only screen and (min-width : 320px) {
+  /**/
 }
-@media only screen and (min-width: 320px) and (max-width: 549px) {
+@media only screen and (min-width : 320px) and (max-width : 549px) {
   .hidden-extra-small {
     display: none;
   }
 }
-@media only screen and (min-width: 550px) {
-  .row {
-    width: 550px;
-  }
-}
-@media only screen and (min-width: 550px) and (max-width: 719px) {
+@media smallScreenOnly {
   .hidden-small {
     display: none;
   }
 }
-@media only screen and (min-width: 720px) {
+@media only screen and (min-width : 720px) {
   .row {
     width: 720px;
   }
@@ -200,22 +193,22 @@ http://www.opensource.org/licenses/mit-license.php
     right: 91.66666667%;
   }
 }
-@media only screen and (min-width: 720px) and (max-width: 959px) {
+@media only screen and (min-width : 550px) and (max-width : 719px) {
   .hidden-medium {
     display: none;
   }
 }
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width : 960px) {
   .row {
     width: 960px;
   }
 }
-@media only screen and (min-width: 960px) and (max-width: 1199px) {
+@media only screen and (min-width : 960px) and (max-width : 1199px) {
   .hidden-large {
     display: none;
   }
 }
-@media (min-width: 1200px) {
+@media only screen and (min-width : 1200px) {
   .row {
     width: 1200px;
   }

@@ -1,13 +1,22 @@
-﻿@extraSmallQuery: 320px;
-@extraSmallWidth: 320px;
-@smallQuery: 550px;
-@smallWidth: 550px;
-@mediumQuery: 720px;
+﻿//media queries
+@extraSmallScreen: ~"only screen and (min-width : 320px)";
+@extraSmallScreenOnly: ~"only screen and (min-width : 320px) and (max-width : 549px)";
+@smallScreen: ~"only screen and (min-width : 550px)";
+@smallScreenOnly: ~"only screen and (min-width : 550px) and (max-width : 719px)";
+@mediumScreen: ~"only screen and (min-width : 720px)";
+@mediumScreenOnly: ~"only screen and (min-width : 550px) and (max-width : 719px)";
+@largeScreen: ~"only screen and (min-width : 960px)";
+@largeScreenOnly: ~"only screen and (min-width : 960px) and (max-width : 1199px)";
+@extraLargeScreen: ~"only screen and (min-width : 1200px)";
+
+
+//rows
 @mediumWidth: 720px;
-@largeQuery: 960px;
 @largeWidth: 960px;
-@extraLargeQuery: 1200px;
 @extraLargeWidth: 1200px;
+
+
+//columns
 @columnWidth: (100% / 12);
 @gutterWidth: 20px;
 
@@ -20,51 +29,49 @@
         margin-right: -10px;
     }
     .clearFix;
-    @media only screen and (min-width : @extraSmallQuery) {
-        width: @extraSmallWidth
-    }
-    @media only screen and (min-width : @smallQuery) {
-        width: @smallWidth
-    }
-    @media only screen and (min-width : @mediumQuery) {
+    @media @mediumScreen {
         width: @mediumWidth
     }
-    @media only screen and (min-width : @largeQuery) {
+    @media @largeScreen {
         width: @largeWidth
     }
-    @media only screen and (min-width : @extraLargeQuery) {
+    @media @extraLargeScreen {
         width: @extraLargeWidth
     } 
 }
+
 
 .makeColumn(@columns){
     box-sizing: border-box;
     padding: 0 (@gutterWidth / 2);
     min-height: 1px;
     position: relative;
-    @media only screen and (min-width : @mediumQuery) {
+    @media @mediumScreen {
         float: left;
         width: @columnWidth * @columns;
     }
 }
 
+
 .offsetBy(@columns){
-    @media only screen and (min-width : @mediumQuery) {
+    @media @mediumScreen {
         margin-left: @columnWidth * @columns;
     }
 }
 
+
 .pushBy(@columns){
-    @media only screen and (min-width : @mediumQuery) {
+    @media @mediumScreen {
         left: @columnWidth * @columns;
     }
 }
 
 .pullBy(@columns){
-    @media only screen and (min-width : @mediumQuery) {
+    @media @mediumScreen {
         right: @columnWidth * @columns;
     }
 }
+
 
 .clearFix(){
     &:after{
