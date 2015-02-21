@@ -204,12 +204,10 @@ h4 {
 h5 {
   font-size: 17.5px;
   line-height: 28px;
-  margin-bottom: 28px;
 }
 h6 {
   font-size: 14px;
   line-height: 28px;
-  margin-bottom: 28px;
 }
 h1.strapline,
 h2.strapline,
@@ -637,6 +635,10 @@ a.button.primary:active,
 .button:active,
 .button.primary:active {
   background-color: #5cb85c;
+}
+.full-width {
+  width: 100%;
+  box-sizing: border-box;
 }
 .pull-left {
   float: left;
