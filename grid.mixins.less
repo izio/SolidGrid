@@ -16,7 +16,6 @@
 
 
 //columns
-@columnWidth: (100% / 12);
 @gutterWidth: 20px;
 
 
@@ -47,27 +46,27 @@
     position: relative;
     @media @mediumScreen {
         float: left;
-        width: @columnWidth * @columns;
+        width: (100% / 12) * @columns;
     }
 }
 
 
 .offsetBy(@columns){
     @media @mediumScreen {
-        margin-left: @columnWidth * @columns;
+        margin-left: (100% / 12) * @columns;
     }
 }
 
 
 .pushBy(@columns){
     @media @mediumScreen {
-        left: @columnWidth * @columns;
+        left: (100% / 12) * @columns;
     }
 }
 
 .pullBy(@columns){
     @media @mediumScreen {
-        right: @columnWidth * @columns;
+        right: (100% / 12) * @columns;
     }
 }
 
