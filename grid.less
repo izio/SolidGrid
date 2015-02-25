@@ -13,21 +13,16 @@ http://www.opensource.org/licenses/mit-license.php
 // rows
 .row {
     margin: 0 auto;
-}
 
-.row:after {
-    content: "\0020";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-}
+    .clearFix();
 
-    .row .row {
+    .row {
         width: auto;
-        margin-left: -10px;
-        margin-right: -10px;
+        margin-left: -(@gutterWidth / 2);
+        margin-right: -(@gutterWidth / 2);
     }
+}
+
 
 // columns
 .column, .columns {
@@ -35,16 +30,6 @@ http://www.opensource.org/licenses/mit-license.php
     padding: 0 (@gutterWidth / 2);
     min-height: 1px;
     position: relative;
-}
-
-// utilities
-.clear {
-    clear: both;
-    display: block;
-    overflow: hidden;
-    visibility: hidden;
-    width: 0;
-    height: 0;
 }
 
 
@@ -58,12 +43,11 @@ http://www.opensource.org/licenses/mit-license.php
 
 
 @media @smallScreen {
-
 }
 
 
 @media @smallScreenOnly {
-    
+
     // utilities
     .hidden-small {
         display: none;

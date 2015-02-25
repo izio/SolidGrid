@@ -16,67 +16,75 @@
 
 
 //columns
+@columnWidth: (100% / 12);
 @gutterWidth: 20px;
 
 
-.makeRow(){
+.makeRow() {
     margin: 0 auto;
-    & &{
+
+    & & {
         width: auto;
-        margin-left: -10px;
-        margin-right: -10px;
+        margin-left: -(@gutterWidth / 2);
+        margin-right: -(@gutterWidth / 2);
     }
+
     .clearFix;
+
     @media @mediumScreen {
-        width: @mediumWidth
+        width: @mediumWidth;
     }
+
     @media @largeScreen {
-        width: @largeWidth
+        width: @largeWidth;
     }
+
     @media @extraLargeScreen {
-        width: @extraLargeWidth
-    } 
+        width: @extraLargeWidth;
+    }
 }
 
 
-.makeColumn(@columns){
+.makeColumn(@columns) {
     box-sizing: border-box;
     padding: 0 (@gutterWidth / 2);
     min-height: 1px;
     position: relative;
+
     @media @mediumScreen {
         float: left;
-        width: (100% / 12) * @columns;
+        width: @columnWidth * @columns;
     }
 }
 
 
-.offsetBy(@columns){
+.offsetBy(@columns) {
     @media @mediumScreen {
-        margin-left: (100% / 12) * @columns;
+        margin-left: @columnWidth * @columns;
     }
 }
 
 
-.pushBy(@columns){
+.pushBy(@columns) {
     @media @mediumScreen {
-        left: (100% / 12) * @columns;
+        left: @columnWidth * @columns;
     }
 }
 
-.pullBy(@columns){
+.pullBy(@columns) {
     @media @mediumScreen {
-        right: (100% / 12) * @columns;
+        right: @columnWidth * @columns;
     }
 }
 
 
-.clearFix(){
-    &:after{
-        content: "\0020";
+.clearFix() {
+    &:after {
         display: block;
-        height: 0;
+        content: " ";
         clear: both;
+        height: 0;
+        overflow: hidden;
         visibility: hidden;
     }
 }
