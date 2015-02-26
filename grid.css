@@ -9,13 +9,13 @@ http://www.opensource.org/licenses/mit-license.php
 .row {
   margin: 0 auto;
 }
+.row:before,
 .row:after {
-  display: block;
   content: " ";
+  display: table;
+}
+.row:after {
   clear: both;
-  height: 0;
-  overflow: hidden;
-  visibility: hidden;
 }
 .row .row {
   width: auto;
