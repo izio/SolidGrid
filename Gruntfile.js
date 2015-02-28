@@ -8,8 +8,8 @@
                     optimization: 2
                 },
                 files: {
-                    "base.css" : "base.less",
-                    "grid.css" : "grid.less"
+                    "base.css": "base.less",
+                    "grid.css": "grid.less"
                 }
             }
         },
