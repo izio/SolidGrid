@@ -322,7 +322,7 @@ span.loud {
 span.highlight {
   background-color: #0a96a9;
   color: #ffffff;
-  padding: 0 14px;
+  padding: 0 7px;
 }
 span.removed {
   text-decoration: line-through;
@@ -423,7 +423,6 @@ fieldset > ol > li,
 fieldset > ul > li {
   margin: 0;
   padding: 0;
-  word-spacing: -5px;
 }
 label,
 input,
@@ -578,6 +577,14 @@ a.button,
   line-height: 42px;
   padding: 0 14px;
 }
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus,
+a.button:focus,
+.button:focus {
+  background-color: #606363;
+}
 button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
@@ -593,6 +600,14 @@ input[type="button"].primary,
 a.button.primary,
 .button.primary {
   background-color: #428bca;
+}
+button.primary:focus,
+input[type="submit"].primary:focus,
+input[type="reset"].primary:focus,
+input[type="button"].primary:focus,
+a.button.primary:focus,
+.button.primary:focus {
+  background-color: #5697cf;
 }
 button.primary:hover,
 input[type="submit"].primary:hover,
