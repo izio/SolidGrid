@@ -29,7 +29,7 @@ http://www.opensource.org/licenses/mit-license.php
   min-height: 1px;
   position: relative;
 }
-@media only screen (max-width : 549px) {
+@media only screen and (max-width : 549px) {
   .hidden-extra-small {
     display: none;
   }
