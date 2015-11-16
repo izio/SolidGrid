@@ -8,6 +8,7 @@ http://www.opensource.org/licenses/mit-license.php
 */
 
 @import "base.mixins.less";
+@import "media.mixins.less";
 
 
 // reset
@@ -60,7 +61,6 @@ table {
 // typography
 
 html {
-    
 }
 
 body {
@@ -81,10 +81,10 @@ h1, h2, h3, h4, h5, h6 {
     color: @headerColour;
 }
 
-    h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
-        text-decoration: none;
-        color: @headerColour;
-    }
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
+    text-decoration: none;
+    color: @headerColour;
+}
 
 h1 {
     font-size: @fontSize * 2.25;
@@ -120,12 +120,12 @@ p {
     margin-bottom: @lineHeight;
 }
 
-    p.introduction {
-        padding: (@lineHeight / 2) 0;
-        margin-bottom: @lineHeight;
-        font-size: (@fontSize * 1.5);
-        line-height: @lineHeight * 1.5;
-    }
+p.introduction {
+    padding: (@lineHeight / 2) 0;
+    margin-bottom: @lineHeight;
+    font-size: (@fontSize * 1.5);
+    line-height: @lineHeight * 1.5;
+}
 
 em {
     font-style: italic;
@@ -140,10 +140,10 @@ a, a:visited {
     text-decoration: underline;
 }
 
-    a:hover, a:focus {
-        color: @activeColour;
-        text-decoration: none;
-    }
+a:hover, a:focus {
+    color: @activeColour;
+    text-decoration: none;
+}
 
 blockquote {
     border-left: 3px solid @quoteColour;
@@ -151,13 +151,13 @@ blockquote {
     padding: 0 0 0 @lineHeight;
 }
 
-    blockquote, cite {
-        font-style: italic;
-    }
+blockquote, cite {
+    font-style: italic;
+}
 
-    blockquote cite:before {
-        content: "\2014 \0020";
-    }
+blockquote cite:before {
+    content: "\2014 \0020";
+}
 
 address {
     display: block;
@@ -196,44 +196,44 @@ pre {
     overflow: auto;
 }
 
-    pre code {
-        padding: 0;
-        color: inherit;
-        white-space: pre-wrap;
-        background-color: transparent;
-        border: 0;
-    }
+pre code {
+    padding: 0;
+    color: inherit;
+    white-space: pre-wrap;
+    background-color: transparent;
+    border: 0;
+}
 
 img {
     margin-bottom: @lineHeight;
 }
 
-    img.scale {
-        max-width: 100%;
-        height: auto;
-    }
+img.scale {
+    max-width: 100%;
+    height: auto;
+}
 
-    img.bordered {
-        border: @imageBorderSize solid @imageBorderColour;
-        -moz-box-shadow: @imageBorderShadow;
-        -webkit-box-shadow: @imageBorderShadow;
-        box-shadow: @imageBorderShadow;
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-    }
+img.bordered {
+    border: @imageBorderSize solid @imageBorderColour;
+    -moz-box-shadow: @imageBorderShadow;
+    -webkit-box-shadow: @imageBorderShadow;
+    box-shadow: @imageBorderShadow;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
-    img.rounded {
-        -moz-border-radius: @imageRadius;
-        -webkit-border-radius: @imageRadius;
-        border-radius: @imageRadius;
-    }
+img.rounded {
+    -moz-border-radius: @imageRadius;
+    -webkit-border-radius: @imageRadius;
+    border-radius: @imageRadius;
+}
 
-    img.circular {
-        -moz-border-radius: 50%;
-        -webkit-border-radius: 50%;
-        border-radius: 50%;
-    }
+img.circular {
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
 
 hr {
     background-color: @hrColour;
@@ -291,9 +291,9 @@ ol {
     margin-left: @lineHeight;
 }
 
-    ul ul, ul ol, ol ol, ol ul {
-        margin: @lineHeight 0 @lineHeight @lineHeight;
-    }
+ul ul, ul ol, ol ol, ol ul {
+    margin: @lineHeight 0 @lineHeight @lineHeight;
+}
 
 li {
     margin: 0;
@@ -366,22 +366,35 @@ fieldset {
     border: none;
     padding: 0;
     margin: 0;
-}
 
-    fieldset legend {
+    legend {
         display: none;
     }
 
-    fieldset > ol, fieldset > ul {
+    > ol {
         list-style-type: none;
         margin: 0;
         padding: 0;
+
+        > li {
+            margin: 0;
+            padding: 0;
+            vertical-align: top;
+        }
     }
 
-    fieldset > ol > li, fieldset > ul > li {
+    > ul {
+        list-style-type: none;
         margin: 0;
         padding: 0;
-    }    
+
+        > li {
+            margin: 0;
+            padding: 0;
+            vertical-align: top;
+        }
+    }
+}
 
 label, input, textarea, select, button, a.button, .button {
     display: inline-block;
@@ -389,29 +402,21 @@ label, input, textarea, select, button, a.button, .button {
     margin-bottom: @lineHeight / 2;
     font-family: inherit;
     font-size: inherit;
-    vertical-align: bottom;
+    vertical-align: top;
 }
 
 label {
-    vertical-align: top;
     font-weight: bold;
-}
+    margin-right: @lineHeight / 2;
 
-    label.left {
-        margin-right: @lineHeight / 2;
-    }
-
-    label.right {
-        margin-left: @lineHeight / 2;
-    }
-
-    label span {
+    span {
         display: block;
         font-weight: normal;
     }
 
-label.error {
-    color: @labelErrorColour;
+    .error {
+        color: @labelErrorColour;
+    }
 }
 
 input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="file"], textarea, select {
@@ -540,7 +545,7 @@ button:active, button.primary:active, input[type="submit"]:active, input[type="s
 
 // utilities
 
-.full-width{
+.full-width {
     width: 100%;
     box-sizing: border-box;
 }
@@ -555,6 +560,18 @@ button:active, button.primary:active, input[type="submit"]:active, input[type="s
     margin: 0 0 (@lineHeight / 2) (@lineHeight / 2);
 }
 
+@media @mediumScreen {
+
+    //inline forms
+    fieldset.inline li {
+        display: inline-block;
+        margin-right: @lineHeight / 2;
+
+        label, input, textarea, select, button, a.button, .button {
+            vertical-align: middle !important;
+        }
+    }
+}
 
 // screen only styles
 @media only screen {

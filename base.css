@@ -413,16 +413,25 @@ fieldset {
 fieldset legend {
   display: none;
 }
-fieldset > ol,
+fieldset > ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+fieldset > ol > li {
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+}
 fieldset > ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-fieldset > ol > li,
 fieldset > ul > li {
   margin: 0;
   padding: 0;
+  vertical-align: top;
 }
 label,
 input,
@@ -436,23 +445,17 @@ a.button,
   margin-bottom: 14px;
   font-family: inherit;
   font-size: inherit;
-  vertical-align: bottom;
+  vertical-align: top;
 }
 label {
-  vertical-align: top;
   font-weight: bold;
-}
-label.left {
   margin-right: 14px;
-}
-label.right {
-  margin-left: 14px;
 }
 label span {
   display: block;
   font-weight: normal;
 }
-label.error {
+label .error {
   color: #ad7676;
 }
 input[type="text"],
@@ -642,6 +645,21 @@ a.button.primary:active,
 .pull-right {
   float: right;
   margin: 0 0 14px 14px;
+}
+@media only screen and (min-width : 720px) {
+  fieldset.inline li {
+    display: inline-block;
+    margin-right: 14px;
+  }
+  fieldset.inline li label,
+  fieldset.inline li input,
+  fieldset.inline li textarea,
+  fieldset.inline li select,
+  fieldset.inline li button,
+  fieldset.inline li a.button,
+  fieldset.inline li .button {
+    vertical-align: middle !important;
+  }
 }
 @media only screen {
   .hide-on-screen {
