@@ -24,12 +24,12 @@
         },
         watch: {
             files: ["*.less"],
-            tasks: ['less']
+            tasks: ["less"]
         }
     });
 
     grunt.loadNpmTasks("grunt-contrib-less");
     grunt.loadNpmTasks("grunt-contrib-cssmin");
-    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks("grunt-contrib-watch");
     grunt.registerTask("default", ["less", "cssmin"]);
 };
