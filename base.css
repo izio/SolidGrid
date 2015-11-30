@@ -6,6 +6,22 @@ Free to use under the MIT license.
 http://www.opensource.org/licenses/mit-license.php
 01/10/2013
 */
+/*
+Solid Grid V2.1
+Copyright 2013, Patrick Robin
+www.solidgrid.co.uk
+Free to use under the MIT license.
+http://www.opensource.org/licenses/mit-license.php
+01/10/2013
+*/
+/*
+Solid Grid V2.1
+Copyright 2013, Patrick Robin
+www.solidgrid.co.uk
+Free to use under the MIT license.
+http://www.opensource.org/licenses/mit-license.php
+01/10/2013
+*/
 html,
 body,
 div,
@@ -141,7 +157,7 @@ table {
   border-spacing: 0;
 }
 body {
-  background-color: #ffffff;
+  background: #ffffff;
   color: #5d5d5d;
   font: 14px/28px 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -263,7 +279,7 @@ pre {
 code {
   color: #056273;
   white-space: nowrap;
-  background-color: #f9f2f4;
+  background: #f9f2f4;
   vertical-align: top;
   padding: 2px;
   -moz-border-radius: 5px;
@@ -278,7 +294,7 @@ pre {
   word-break: break-all;
   -ms-word-wrap: break-word;
   word-wrap: break-word;
-  background-color: #f9f2f4;
+  background: #f9f2f4;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   border-radius: 6px;
@@ -290,7 +306,7 @@ pre code {
   padding: 0;
   color: inherit;
   white-space: pre-wrap;
-  background-color: transparent;
+  background: transparent;
   border: 0;
 }
 img {
@@ -320,7 +336,7 @@ img.circular {
   border-radius: 50%;
 }
 hr {
-  background-color: #e4e4e4;
+  background: #e4e4e4;
   height: 1px;
   width: 90%;
   border: none;
@@ -335,7 +351,7 @@ span.loud {
   color: #000000;
 }
 span.highlight {
-  background-color: #0a96a9;
+  background: #0a96a9;
   color: #ffffff;
   padding: 0 7px;
 }
@@ -387,7 +403,7 @@ dd {
   line-height: 28px;
 }
 .table caption {
-  background-color: transparent;
+  background: transparent;
   padding: 0 14px;
   line-height: 56px;
   font-size: 21px;
@@ -399,7 +415,7 @@ dd {
   padding: 0 14px;
 }
 .table th {
-  background-color: #transparent;
+  background: #transparent;
   line-height: 35px;
   font-size: 17.5px;
   font-weight: bold;
@@ -409,12 +425,12 @@ dd {
   padding: 0 14px;
   line-height: 28px;
   vertical-align: top;
-  background-color: transparent;
+  background: transparent;
   color: #5d5d5d;
   border-top: 1px solid #e4e4e4;
 }
 .table.zebra tr:nth-child(2n+1) td {
-  background-color: #f4f4f4;
+  background: #f4f4f4;
   color: #5d5d5d;
 }
 form {
@@ -502,7 +518,7 @@ input[type="number"]:focus,
 input[type="file"]:focus,
 textarea:focus,
 select:focus {
-  background-color: #ffffff;
+  background: #ffffff;
   border: 1px solid #006699;
   color: #555555;
   -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
@@ -542,7 +558,7 @@ select.error,
 textarea.error,
 .input-validation-error {
   border: 1px solid #e0b1b1;
-  background-color: #ffd9d5;
+  background: #ffd9d5;
   color: #ad7676;
   -moz-box-shadow: inset 0 0 45px #f0bfba;
   -webkit-box-shadow: inset 0 0 45px #f0bfba;
@@ -557,7 +573,7 @@ a.button,
   height: 42px;
   line-height: 42px;
   margin-right: 14px;
-  background-color: #474949;
+  background: #474949;
   text-align: center;
   text-decoration: none;
   color: #ffffff;
@@ -601,7 +617,7 @@ input[type="reset"]:focus,
 input[type="button"]:focus,
 a.button:focus,
 .button:focus {
-  background-color: #606363;
+  background: #606363;
 }
 button:hover,
 input[type="submit"]:hover,
@@ -609,7 +625,7 @@ input[type="reset"]:hover,
 input[type="button"]:hover,
 a.button:hover,
 .button:hover {
-  background-color: #3a3c3c;
+  background: #3a3c3c;
 }
 button.primary,
 input[type="submit"].primary,
@@ -617,7 +633,7 @@ input[type="reset"].primary,
 input[type="button"].primary,
 a.button.primary,
 .button.primary {
-  background-color: #428bca;
+  background: #428bca;
 }
 button.primary:focus,
 input[type="submit"].primary:focus,
@@ -625,7 +641,7 @@ input[type="reset"].primary:focus,
 input[type="button"].primary:focus,
 a.button.primary:focus,
 .button.primary:focus {
-  background-color: #5697cf;
+  background: #5697cf;
 }
 button.primary:hover,
 input[type="submit"].primary:hover,
@@ -633,7 +649,7 @@ input[type="reset"].primary:hover,
 input[type="button"].primary:hover,
 a.button.primary:hover,
 .button.primary:hover {
-  background-color: #357ebd;
+  background: #357ebd;
 }
 button:active,
 button.primary:active,
@@ -647,7 +663,7 @@ a.button:active,
 a.button.primary:active,
 .button:active,
 .button.primary:active {
-  background-color: #5cb85c;
+  background: #5cb85c;
 }
 .full-width {
   width: 100%;
