@@ -1,25 +1,12 @@
-﻿/*
-Solid Grid V2.1
-Copyright 2013, Patrick Robin
-www.solidgrid.co.uk
-Free to use under the MIT license.
-http://www.opensource.org/licenses/mit-license.php
-01/10/2013
-*/
-
-@import "media.mixins.less";
-
-//rows
-@mediumWidth: 720px;
-@largeWidth: 960px;
-@extraLargeWidth: 1200px;
+﻿@import "media.mixins.less";
 
 
-//columns
+// parameters
 @columnWidth: (100% / 12);
 @gutterWidth: 20px;
 
 
+// rows
 .makeRow() {
     margin: 0 auto;
 
@@ -44,7 +31,7 @@ http://www.opensource.org/licenses/mit-license.php
     }
 }
 
-
+// columns
 .makeColumn(@columns) {
     box-sizing: border-box;
     padding: 0 (@gutterWidth / 2);
@@ -57,13 +44,11 @@ http://www.opensource.org/licenses/mit-license.php
     }
 }
 
-
 .offsetBy(@columns) {
     @media @mediumScreen {
         margin-left: @columnWidth * @columns;
     }
 }
-
 
 .pushBy(@columns) {
     @media @mediumScreen {
@@ -78,6 +63,7 @@ http://www.opensource.org/licenses/mit-license.php
 }
 
 
+// clearing
 .clearFix() {
     &:before, &:after {
         content: " ";
