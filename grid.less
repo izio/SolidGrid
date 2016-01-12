@@ -1,5 +1,5 @@
 ﻿/*
-Solid Grid V2.1
+Solid Grid V2.2
 Copyright 2013, Patrick Robin
 www.solidgrid.co.uk
 Free to use under the MIT license.
@@ -16,10 +16,13 @@ http://www.opensource.org/licenses/mit-license.php
 
     .clearFix();
 
+    &.column{
+        float: none;
+    }
+
     .row {
         width: auto;
-        margin-left: -(@gutterWidth / 2);
-        margin-right: -(@gutterWidth / 2);
+        margin: 0 -(@gutterWidth / 2);
     }
 }
 

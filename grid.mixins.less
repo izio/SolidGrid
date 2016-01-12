@@ -9,14 +9,14 @@
 // rows
 .makeRow() {
     margin: 0 auto;
+    float: none;
+
+    .clearFix;
 
     & & {
         width: auto;
-        margin-left: -(@gutterWidth / 2);
-        margin-right: -(@gutterWidth / 2);
+        margin: -(@gutterWidth / 2);
     }
-
-    .clearFix;
 
     @media @mediumScreen {
         width: @mediumWidth;
@@ -31,8 +31,36 @@
     }
 }
 
+.makeRow(@column) when (@column) {
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 (@gutterWidth / 2);
+    min-height: 1px;
+    position: relative;
+
+    .clearFix;
+
+    & & {
+        width: auto;
+        margin: -(@gutterWidth / 2);
+    }
+
+    @media @mediumScreen {
+        width: @mediumWidth;
+    }
+
+    @media @largeScreen {
+        width: @largeWidth;
+    }
+
+    @media @extraLargeScreen {
+        width: @extraLargeWidth;
+    }
+}
+
+
 // columns
-.makeColumn(@columns) {
+.makeColumn(@columns) when (isnumber(@columns)) and (@columns <= 12) {
     box-sizing: border-box;
     padding: 0 (@gutterWidth / 2);
     min-height: 1px;
@@ -44,19 +72,19 @@
     }
 }
 
-.offsetBy(@columns) {
+.offsetBy(@columns) when (isnumber(@columns)) and (@columns <= 11) {
     @media @mediumScreen {
         margin-left: @columnWidth * @columns;
     }
 }
 
-.pushBy(@columns) {
+.pushBy(@columns) when (isnumber(@columns)) and (@columns <= 11) {
     @media @mediumScreen {
         left: @columnWidth * @columns;
     }
 }
 
-.pullBy(@columns) {
+.pullBy(@columns) when (isnumber(@columns)) and (@columns <= 11) {
     @media @mediumScreen {
         right: @columnWidth * @columns;
     }
