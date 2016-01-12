@@ -24,7 +24,7 @@
         },
         watch: {
             files: ["*.less"],
-            tasks: ["less"]
+            tasks: ["less", "cssmin"]
         }
     });
 
