@@ -8,17 +8,17 @@
                     optimization: 2
                 },
                 files: {
-                    "base.css": "base.less",
-                    "grid.css": "grid.less"
+                    "css/base.css": "less/base.less",
+                    "css/grid.css": "less/grid.less"
                 }
             }
         },
         cssmin: {
             development: {
                 files: {
-                    "base.min.css": "base.css",
-                    "grid.min.css": "grid.css",
-                    "combined.min.css": ["base.css", "grid.css"]
+                    "css/base.min.css": "css/base.css",
+                    "css/grid.min.css": "css/grid.css",
+                    "css/combined.min.css": ["css/base.css", "css/grid.css"]
                 }
             }
         },

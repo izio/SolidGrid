@@ -1,0 +1,26 @@
+{
+  "name": "SolidGrid",
+  "description": "A mobile first, twelve column grid that's designed to make it easy to create mobile friendly websites.",
+  "homepage": "http://www.solidgrid.co.uk/",
+  "keywords": [
+    "css",
+    "responsive",
+    "grid"
+  ],
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/izio/SolidGrid"
+  },
+  "main": [
+    "less/*.*",
+    "css/*.*"
+  ],
+  "ignore": [
+    ".gitattributes",
+    ".gitignore",
+    "bower.json",
+    "index.html"
+  ]
+}
