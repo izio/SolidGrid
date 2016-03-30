@@ -1,5 +1,5 @@
 ﻿/*
-Solid Grid V2.3
+Solid Grid v1.0.1
 Copyright 2013, Patrick Robin
 www.solidgrid.co.uk
 Free to use under the MIT license.
@@ -302,6 +302,7 @@ ul ul, ul ol, ol ol, ol ul {
 
 li {
     margin: 0;
+    line-height: @lineHeight;
 }
 
 dl {
@@ -385,6 +386,7 @@ fieldset {
             margin: 0;
             padding: 0;
             vertical-align: top;
+            line-height: @lineHeight * 1.5;
         }
     }
 
@@ -397,6 +399,7 @@ fieldset {
             margin: 0;
             padding: 0;
             vertical-align: top;
+            line-height: @lineHeight * 1.5;
         }
     }
 }
@@ -474,8 +477,8 @@ textarea {
 
 input[type="checkbox"], input[type="radio"] {
     vertical-align: top;
-    height: @lineHeight;
-    line-height: @lineHeight;
+    height: @lineHeight * 1.5;
+    line-height: @lineHeight * 1.5;
     margin: 0 (@lineHeight / 2) 0 (@lineHeight / 2);
 }
 
