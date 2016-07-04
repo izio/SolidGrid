@@ -1,6 +1,6 @@
 {
   "name": "solidgrid",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A mobile first, twelve column grid that's designed to make it easy to create mobile friendly websites.",
   "keywords": [ "css", "responsive", "grid" ],
   "repository": {

@@ -14,17 +14,10 @@ http://www.opensource.org/licenses/mit-license.php
 .row {
     margin-left: auto;
     margin-right: auto;
-
     .clearFix();
 
-    &.column{
+    &.column {
         float: none;
-    }
-
-    .row {
-        width: auto;
-        margin-left: -(@gutterWidth / 2);
-        margin-right: -(@gutterWidth / 2);
     }
 }
 
@@ -67,6 +60,12 @@ http://www.opensource.org/licenses/mit-license.php
     // rows
     .row {
         width: @mediumWidth;
+
+        .row {
+            width: auto;
+            margin-left: -(@gutterWidth / 2);
+            margin-right: -(@gutterWidth / 2);
+        }
     }
 
     // base columns

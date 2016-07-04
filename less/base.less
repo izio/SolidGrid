@@ -81,7 +81,7 @@ h1, h2, h3, h4, h5, h6 {
     color: @headerColour;
 }
 
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
     text-decoration: none;
     color: @headerLinkColour;
 }
@@ -140,7 +140,7 @@ strong {
     font-weight: bold;
 }
 
-a, a:visited {
+a {
     color: @linkColour;
     text-decoration: underline;
 }
@@ -430,7 +430,7 @@ label {
 input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="file"], textarea, select {
     height: @lineHeight * 1.5;
     line-height: @lineHeight * 1.5;
-    padding: 0 (@lineHeight / 2);
+    padding: 0 (@lineHeight / 4);
     border: 1px solid @inputBorder;
     outline: none;
     -moz-border-radius: @buttonRadius;

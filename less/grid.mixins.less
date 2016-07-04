@@ -11,17 +11,16 @@
     margin-left: auto;
     margin-right: auto;
     float: none;
-
     .clearFix;
-
-    & & {
-        width: auto;
-        margin-left: -(@gutterWidth / 2);
-        margin-right: -(@gutterWidth / 2);
-    }
 
     @media @mediumScreen {
         width: @mediumWidth;
+
+        & & {
+            width: auto;
+            margin-left: -(@gutterWidth / 2);
+            margin-right: -(@gutterWidth / 2);
+        }
     }
 
     @media @largeScreen {
@@ -40,7 +39,6 @@
     padding: 0 (@gutterWidth / 2);
     min-height: 1px;
     position: relative;
-
     .clearFix;
 
     & & {
