@@ -13,14 +13,14 @@
     float: none;
     .clearFix;
 
+    & & {
+        width: auto;
+        margin-left: -(@gutterWidth / 2);
+        margin-right: -(@gutterWidth / 2);
+    }
+
     @media @mediumScreen {
         width: @mediumWidth;
-
-        & & {
-            width: auto;
-            margin-left: -(@gutterWidth / 2);
-            margin-right: -(@gutterWidth / 2);
-        }
     }
 
     @media @largeScreen {
